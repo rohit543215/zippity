@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>zippity. – Pricing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f4f9ef;
+        color: #222;
+      }
+      header {
+        background: #fff;
+        padding: 20px 0;
+        border-bottom: 1px solid #eaeaea;
+        overflow: hidden;
+      }
+      .logo {
+        font-weight: bold;
+        font-size: 2em;
+        color: #213217;
+        margin-left: 32px;
+        letter-spacing: -1px;
+        float: left;
+      }
+      nav {
+        float: right;
+        margin-right: 32px;
+      }
+      nav a {
+        color: #4a4a4a;
+        text-decoration: none;
+        margin: 0 20px;
+        font-weight: 600;
+      }
+      nav a.active,
+      nav a:hover {
+        color: #7fa443;
+        border-bottom: 2px solid #7fa443;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 40px auto 0 auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 8px 32px rgba(120, 130, 101, 0.12);
+        clear: both;
+      }
+      .headline {
+        text-align: center;
+        font-size: 2.5em;
+        font-weight: bold;
+        margin-top: 32px;
+        margin-bottom: 12px;
+      }
+      .subtitle {
+        text-align: center;
+        font-size: 1.25em;
+        color: #517c31;
+        margin-bottom: 20px;
+        font-weight: 500;
+      }
+      .section-title {
+        text-align: center;
+        margin-top: 24px;
+        font-size: 2em;
+      }
+      .plans {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+      }
+      .plan {
+        background: #f4f9ef;
+        border-radius: 12px;
+        margin: 10px 16px;
+        padding: 32px 24px;
+        flex: 1 1 220px;
+        min-width: 220px;
+        box-shadow: 0 2px 8px #dadada2e;
+      }
+      .plan .price {
+        font-size: 2em;
+        font-weight: bold;
+        margin-bottom: 12px;
+        color: #4b7f2d;
+      }
+      .plan ul {
+        padding: 0;
+        list-style: none;
+        font-size: 1em;
+      }
+      .plan ul li {
+        margin: 9px 0;
+        color: #555;
+      }
+      .plan .choose-btn {
+        display: inline-block;
+        margin-top: 24px;
+        background: #73bf32;
+        color: #fff;
+        border: none;
+        padding: 12px 36px;
+        border-radius: 100px;
+        font-size: 1.1em;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s;
+        text-decoration: none;
+      }
+      .plan .choose-btn:hover {
+        background: #86d641;
+      }
+      .card {
+        background: #f8fff2;
+        border-radius: 16px;
+        padding: 36px 32px;
+        margin: 32px 0;
+        box-shadow: 0 3px 16px rgba(130, 160, 60, 0.06);
+      }
+      .card-title {
+        font-weight: bold;
+        font-size: 1.45em;
+        margin-bottom: 14px;
+      }
+      .restrictions-list {
+        line-height: 1.7;
+        color: #426a3c;
+      }
+      .restrictions-list li {
+        margin-bottom: 8px;
+      }
+      .know-more {
+        display: inline-block;
+        margin: 26px 0 0 0;
+        background: #fff;
+        color: #7fa443;
+        border: 2px solid #7fa443;
+        border-radius: 8px;
+        padding: 10px 24px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background 0.15s;
+      }
+      .know-more:hover {
+        background: #eafae2;
+      }
+      .get-started {
+        display: inline-block;
+        background: #4b7f2d;
+        color: #fff;
+        text-decoration: none;
+        padding: 16px 40px;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 1.2em;
+        transition: background 0.2s;
+        margin-top: 40px;
+      }
+      .get-started:hover {
+        background: #5fbf45;
+      }
+      @media (max-width: 950px) {
+        .plans {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <span class="logo">zippity<span style="color: #e5c239">&#9679;</span></span>
+      <nav>
+        <a href="index.html" class="active">PRICING</a>
+        <a href="features.html">FEATURES</a>
+        <a href="enterprise.html">ENTERPRISE</a>
+        <a href="help.html">HELP</a>
+        <a href="contact.html">CONTACT US</a>
+        <a href="login.html">LOGIN</a>
+      </nav>
+      <div style="clear: both"></div>
+    </header>
+
+    <div class="container">
+      <div class="headline">
+        Upgrade your retail business with affordable plans<br />starting at just Rs 10/day!
+      </div>
+      <div class="subtitle">
+        Attractive pricing plans for your retail business category
+      </div>
+      <div class="section-title">Choose Your Plan</div>
+      <div class="plans">
+        <div class="plan">
+          <div class="price">Basic</div>
+          <ul>
+            <li>Up to 20 products in catalogue*</li>
+            <li>Max 30 bills/month</li>
+            <li>No more than 15 orders/month</li>
+            <li>0.5% digital transaction fee</li>
+          </ul>
+          <a class="choose-btn" href="basic-plan.html">KNOW MORE</a>
+        </div>
+        <div class="plan">
+          <div class="price">Platinum</div>
+          <ul>
+            <li>Unlimited products in catalogue</li>
+            <li>Unlimited bills/month</li>
+            <li>Unlimited orders/month</li>
+            <li>Dedicated support</li>
+          </ul>
+          <a class="choose-btn" href="platinum-plan.html">KNOW MORE</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Basic Plan Usage Restrictions</div>
+        <ul class="restrictions-list">
+          <li>Transaction Fees: 0.5% added to standard payment charges.</li>
+          <li>Up to 20 products in the catalogue (50 for Kirana, Grocery & FMCG, Bakery & Confectionery, Fruits & Vegetables, Stationery, Gifts & Toys, Fashion, Furnishing & Accessories).</li>
+          <li>No more than 15 online orders/month.</li>
+          <li>Max 30 bills/month.</li>
+        </ul>
+        <a class="know-more" href="#">KNOW MORE</a>
+      </div>
+
+      <div style="text-align: center; margin: 30px 0">
+        <a style="color: #4b7f2d; text-decoration: underline" href="#">Know more about payment gateway and transaction charges</a>
+      </div>
+
+      <!-- Get Started Button -->
+      <div style="text-align: center;">
+        <a href="get-started.html" class="get-started">Get Started</a>
+      </div>
+    </div>
+  </body>
+</html>

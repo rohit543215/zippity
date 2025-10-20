@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>zippity – Contact Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #F4F9EF;
+            color: #222;
+        }
+        header {
+            background: #fff;
+            padding: 20px 0;
+            border-bottom: 1px solid #eaeaea;
+            overflow: hidden;
+        }
+        .logo {
+            font-weight: bold;
+            font-size: 2em;
+            color: #213217;
+            margin-left: 32px;
+            letter-spacing: -1px;
+            float: left;
+        }
+        nav {
+            float: right;
+            margin-right: 32px;
+        }
+        nav a {
+            color: #4a4a4a;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 600;
+        }
+        nav a.active, nav a:hover {
+            color: #7fa443;
+            border-bottom: 2px solid #7fa443;
+        }
+        .container {
+            max-width: 700px;
+            margin: 40px auto 0 auto;
+            padding: 36px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(120,130,101,0.12);
+            clear: both;
+        }
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 18px;
+            color: #517C31;
+            text-align: center;
+            font-weight: bold;
+        }
+        .subtitle {
+            text-align: center;
+            color: #578d2e;
+            margin-bottom: 20px;
+            font-weight: 500;
+            font-size: 1.15em;
+        }
+        .contact-form {
+            background: #f4f9ef;
+            border-radius: 12px;
+            padding: 28px 24px;
+            margin-bottom: 18px;
+            box-shadow: 0 2px 8px #dadada2e;
+        }
+        .contact-form label {
+            font-weight: 600;
+            color: #355c21;
+            display: block;
+            margin: 16px 0 7px 0;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #bbb;
+            font-size: 1em;
+        }
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        .contact-form button {
+            margin-top: 24px;
+            background: #73bf32;
+            border: none;
+            color: white;
+            padding: 12px 36px;
+            font-weight: 700;
+            font-size: 1.12em;
+            border-radius: 100px;
+            cursor: pointer;
+            transition: background 0.22s;
+            width: 100%;
+        }
+        .contact-form button:hover {
+            background: #86d641;
+        }
+        .contact-form button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        #successMessage {
+            display: none;
+            color: #43a047;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 24px;
+            font-size: 1.15em;
+        }
+        #errorMessage {
+            display: none;
+            color: #d32f2f;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .contact-info {
+            background: #f8fff2;
+            border-radius: 14px;
+            padding: 28px 20px;
+            box-shadow: 0 3px 16px rgba(130, 160, 60, 0.07);
+            margin-top: 14px;
+            font-size: 1.07em;
+        }
+        .contact-info li {
+            padding-bottom: 9px;
+            color: #426A3C;
+        }
+        .contact-info b {
+            color: #4B7F2D;
+        }
+        .contact-info a {
+            color: #4B7F2D;
+            text-decoration: underline;
+        }
+        @media (max-width: 800px) {
+            .container {
+                padding: 18px;
+            }
+            .contact-form, .contact-info {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span class="logo">zippity<span style="color:#E5C239;">&#9679;</span></span>
+        <nav>
+            <a href="index.html">PRICING</a>
+            <a href="features.html">FEATURES</a>
+            <a href="enterprise.html">ENTERPRISE</a>
+            <a href="help.html">HELP</a>
+            <a href="contact.html" class="active">CONTACT US</a>
+            <a href="login.html">LOGIN</a>
+        </nav>
+        <div style="clear:both;"></div>
+    </header>
+    <div class="container">
+        <div class="section-title">Contact Us</div>
+        <div class="subtitle">Drop in your details and we'll connect!</div>
+        <form class="contact-form" id="contactForm">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="phone">Contact Number</label>
+            <input type="tel" id="phone" name="phone" required />
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Submit</button>
+            <div id="successMessage">Your message was submitted successfully!</div>
+            <div id="errorMessage"></div>
+        </form>
+        <ul class="contact-info">
+            <li>Reach out via toll-free: <b>9322431837</b> (Monday to Friday, 9 am to 6 pm)</li>
+            <li>Email: <b>gj2615059@gmail.com</b> (Anytime, 24x7)</li>
+            <li>WhatsApp your 10-digit number for quick start</li>
+            <li>
+                <a href="#">Download on Google Play/App Store</a>
+            </li>
+        </ul>
+    </div>
+    <!-- Supabase JS and handler script -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        // Supabase credentials
+        const supabaseUrl = 'https://qptedtbgmawxuujhhdpz.supabase.co';
+        const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFwdGVkdGJnbWF3eHV1amhoZHB6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA2MzYwNTMsImV4cCI6MjA3NjIxMjA1M30.De-F2D1_gmqgyic9Aa0-_jwXA_jfvtfDOFmipcV5m-8';
+        
+        // Initialize Supabase client
+        const supabase = window.supabase.createClient(supabaseUrl, supabaseAnonKey);
+
+        const contactForm = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+        contactForm.addEventListener('submit', async function(event) {
+            event.preventDefault();
+            successMessage.style.display = 'none';
+            errorMessage.style.display = 'none';
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+
+            // Get form data
+            const name = contactForm.name.value.trim();
+            const email = contactForm.email.value.trim();
+            const phone = contactForm.phone.value.trim();
+            const message = contactForm.message.value.trim();
+
+            // Insert into Supabase
+            const { data, error } = await supabase
+                .from('contacts')
+                .insert([{ name, email, phone, message }]);
+
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Submit';
+
+            if (error) {
+                errorMessage.textContent = 'Submission failed: ' + error.message;
+                errorMessage.style.display = 'block';
+            } else {
+                successMessage.textContent = 'Your message was submitted successfully!';
+                successMessage.style.display = 'block';
+                contactForm.reset();
+            }
+        });
+    </script>
+</body>
+</html>

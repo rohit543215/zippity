@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>zippity.biz – Sign Up</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f4f9ef;
+      color: #222;
+      padding-top: 70px;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      padding: 20px 0;
+      border-bottom: 1px solid #eaeaea;
+      overflow: hidden;
+      z-index: 1000;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 2em;
+      color: #213217;
+      margin-left: 32px;
+      letter-spacing: -1px;
+      float: left;
+      text-decoration: none;
+    }
+    .logo:hover {
+      color: #7fa443;
+    }
+    nav {
+      float: right;
+      margin-right: 32px;
+    }
+    nav a {
+      color: #4a4a4a;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 600;
+    }
+    nav a.active,
+    nav a:hover {
+      color: #7fa443;
+      border-bottom: 2px solid #7fa443;
+    }
+    .container {
+      background: #fff;
+      padding: 40px 32px;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(120,130,101,0.12);
+      max-width: 360px;
+      margin: 0 auto;
+    }
+    h2 {
+      text-align: center;
+      color: #4b7f2d;
+      margin-bottom: 24px;
+    }
+    label {
+      display: block;
+      margin: 12px 0 6px 0;
+      font-weight: 600;
+      color: #3b4d2e;
+    }
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #bbb;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+    button {
+      width: 100%;
+      margin: 24px 0 12px 0;
+      background: #73bf32;
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 100px;
+      font-size: 1.1em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #86d641;
+    }
+    button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    .error, .success {
+      text-align: center;
+      margin-top: 12px;
+      display: none;
+      font-weight: 600;
+    }
+    .error {
+      color: red;
+    }
+    .success {
+      color: green;
+    }
+    .link {
+      text-align: center;
+      margin-top: 16px;
+    }
+    .link a {
+      color: #4b7f2d;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">zippity<span style="color:#E5C239;">&#9679;</span></a>
+    <nav>
+      <a href="index.html">PRICING</a>
+      <a href="features.html">FEATURES</a>
+      <a href="enterprise.html">ENTERPRISE</a>
+      <a href="help.html">HELP</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="login.html">LOGIN</a>
+    </nav>
+    <div style="clear:both;"></div>
+  </header>
+
+  <div class="container">
+    <h2>Create a New Account</h2>
+    <form id="signupForm">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required />
+
+      <button type="submit">Sign Up</button>
+      <div id="errorMsg" class="error"></div>
+      <div id="successMsg" class="success"></div>
+    </form>
+    <div class="link">
+      <a href="login.html">Already have an account? Log in here</a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    const supabaseUrl = 'https://ixgjtbpnqrvktnabouxj.supabase.co';
+    const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml4Z2p0YnBucXJ2a3RuYWJvdXhqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjAzNTE5NTcsImV4cCI6MjA3NTkyNzk1N30.SuCYIJmfNuxCRw-aKQg5eOtzBv7P3WiMngeFOn-I_7c';
+
+    const supabase = window.supabase.createClient(supabaseUrl, supabaseAnonKey);
+
+    const signupForm = document.getElementById("signupForm");
+    const errorMsg = document.getElementById("errorMsg");
+    const successMsg = document.getElementById("successMsg");
+    const submitBtn = signupForm.querySelector('button[type="submit"]');
+
+    signupForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      errorMsg.style.display = "none";
+      successMsg.style.display = "none";
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Signing up...";
+
+      const email = signupForm.email.value.trim();
+      const password = signupForm.password.value;
+
+      const { data, error } = await supabase.auth.signUp({ email, password });
+
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Sign Up";
+
+      if (error) {
+        errorMsg.textContent = error.message;
+        errorMsg.style.display = "block";
+      } else {
+        successMsg.textContent = "Signup successful! Check your email to confirm.";
+        successMsg.style.display = "block";
+        signupForm.reset();
+      }
+    });
+  </script>
+</body>
+</html>

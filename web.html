@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zippity.biz – Affordable Retail Plans</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* --- [All your previous CSS remains unchanged] --- */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #F4F9EF;
+            color: #222;
+        }
+        /* ... (rest of your CSS styles from previous code) ... */
+        /* Responsive */
+        @media (max-width: 950px) {
+            .plans { flex-direction: column; align-items: center; }
+        }
+        /* New sections styling */
+        .section {
+            max-width: 1100px;
+            margin: 40px auto 0 auto;
+            padding: 24px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(120,130,101,0.10);
+        }
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 16px;
+            color: #517C31;
+            text-align: left;
+        }
+        .enterprise-list, .features-list, .contact-list {
+            list-style: disc inside;
+            margin-left: 24px;
+        }
+        .contact-form label {
+            display: block;
+            margin-top: 6px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 4px 0 10px 0;
+            border: 1px solid #bbb;
+            border-radius: 6px;
+        }
+        .contact-form button {
+            background: #73bf32;
+            color: #fff;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .contact-form button:hover { background: #86d641; }
+    </style>
+</head>
+<body>
+    <!-- Header unchanged -->
+    <header>
+        <span class="logo">zippity<span style="color:#E5C239;">&#9679;</span>.biz</span>
+        <nav>
+            <a href="#" class="active">PRICING</a>
+            <a href="#features">FEATURES</a>
+            <a href="#enterprise">ENTERPRISE</a>
+            <a href="#help">HELP</a>
+            <a href="#contact">CONTACT US</a>
+            <a href="#">LOGIN</a>
+            <a href="#" style="background:#222; color:#fff; padding: 7px 22px; border-radius:6px;">DOWNLOAD</a>
+        </nav>
+        <div style="clear:both;"></div>
+    </header>
+    
+    <!-- Main Container: PRICING -->
+    <div class="container" id="pricing">
+        <div class="headline">Upgrade your retail business with affordable plans<br>starting at just Rs 10/day!</div>
+        <div class="subtitle">Attractive pricing plans for your retail business category</div>
+        <div class="section-title">Choose Your Plan</div>
+        <div class="plans">
+            <div class="plan">
+                <div class="price">Basic</div>
+                <ul>
+                    <li>Up to 20 products in catalogue*</li>
+                    <li>Max 30 bills/month</li>
+                    <li>No more than 15 orders/month</li>
+                    <li>0.5% digital transaction fee</li>
+                </ul>
+                <a class="choose-btn" href="#">KNOW MORE</a>
+            </div>
+            <!-- Example additional plan (Platinum) -->
+            <div class="plan">
+                <div class="price">Platinum</div>
+                <ul>
+                    <li>Unlimited products in catalogue</li>
+                    <li>Unlimited bills/month</li>
+                    <li>Unlimited orders/month</li>
+                    <li>Dedicated support</li>
+                </ul>
+                <a class="choose-btn" href="#">KNOW MORE</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-title">Basic Plan Usage Restrictions</div>
+            <ul class="restrictions-list">
+                <li>Transaction Fees: 0.5% added to standard payment charges.</li>
+                <li>Up to 20 products in the catalogue (50 for Kirana, Grocery & FMCG, Bakery & Confectionery, Fruits & Vegetables, Stationery, Gifts & Toys, Fashion, Furnishing & Accessories).</li>
+                <li>No more than 15 online orders/month.</li>
+                <li>Max 30 bills/month.</li>
+            </ul>
+            <a class="know-more" href="#">KNOW MORE</a>
+        </div>
+        <div style="text-align:center;margin:30px 0;">
+            <a style="color:#4B7F2D;text-decoration:underline;" href="#">Know more about payment gateway and transaction charges</a>
+        </div>
+    </div>
+
+    <!-- FEATURES Section -->
+    <div class="section" id="features">
+        <div class="section-title">Key Features</div>
+        <ul class="features-list">
+            <li>Online store creation and management</li>
+            <li>Custom domain name with annual plan</li>
+            <li>Ready-made catalogue with 10,000+ items</li>
+            <li>Inventory management and sync with online store</li>
+            <li>Multiple payment modes: cash, card, UPI, payment links</li>
+            <li>Digital/WhatsApp billing & branded receipts</li>
+            <li>Barcode scanner for fast inventory onboarding</li>
+            <li>Hyperlocal delivery integrations (Self, Dunzo, Shiprocket)</li>
+            <li>Device compatibility: Desktop & Mobile; branded Android app for your store</li>
+        </ul>
+    </div>
+
+    <!-- ENTERPRISE Section -->
+    <div class="section" id="enterprise">
+        <div class="section-title">Enterprise Solutions</div>
+        <ul class="enterprise-list">
+            <li>Product modules: Inventory, Order, Offline Billing/POS, E-commerce Storefront Suite</li>
+            <li>Omnichannel retail management: online stores, marketplaces, warehouses</li>
+            <li>Integration: CRM, campaign management, analytics, multi-location business accounting</li>
+            <li>ERP tailored for retail: distribution, franchise, company-owned store support</li>
+            <li>Decentralized D2C/B2B: manage multiple stores, franchise, distributor, retailer locations</li>
+            <li>Smart payment reconciliation, multi-mode payment & credit history</li>
+            <li>Comprehensive analytics and reporting</li>
+            <li>APIs for integration with retail software</li>
+        </ul>
+    </div>
+
+    <!-- CONTACT US Section -->
+    <div class="section" id="contact">
+        <div class="section-title">Contact Us</div>
+        <p>Drop in your details and we'll connect:</p>
+        <form class="contact-form">
+            <label for="name">Your Name</label>
+            <input type="text" name="name" required>
+            <label for="email">Email Address</label>
+            <input type="email" name="email" required>
+            <label for="number">Contact Number</label>
+            <input type="tel" name="number" required>
+            <label for="message">Your Message</label>
+            <textarea name="message" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <ul class="contact-list">
+            <li>Reach out via toll-free: <b>1860-123-1233</b> (Mon-Fri, 9am to 6pm)</li>
+            <li>Email: <b>hello@zadinga.in</b> (Anytime, 24x7)</li>
+            <li>WhatsApp your 10-digit number for quick start</li>
+            <li>
+                <a style="color:#4B7F2D;text-decoration:underline;" href="#">Download on Google Play/App Store</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
