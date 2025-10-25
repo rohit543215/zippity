@@ -3,18 +3,28 @@
 <head>
     <meta charset="UTF-8" />
     <title>zippity – Help</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             margin: 0;
             font-family: 'Segoe UI', Arial, sans-serif;
-            background: #F4F9EF;
+            background: #f4f9ef;
             color: #222;
+            padding-top: 70px;
         }
         header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
             background: #fff;
             padding: 20px 0;
             border-bottom: 1px solid #eaeaea;
+            overflow: hidden;
+            z-index: 1000;
         }
         .logo {
             font-weight: bold;
@@ -22,40 +32,128 @@
             color: #213217;
             margin-left: 32px;
             letter-spacing: -1px;
+            float: left;
         }
         nav {
             float: right;
             margin-right: 32px;
         }
         nav a {
-            color: #4A4A4A;
+            color: #4a4a4a;
             text-decoration: none;
             margin: 0 20px;
             font-weight: 600;
+            font-size: 0.95em;
         }
-        nav a.active, nav a:hover {
-            color: #7FA443;
-            border-bottom: 2px solid #7FA443;
+        nav a.active,
+        nav a:hover {
+            color: #7fa443;
+            border-bottom: 2px solid #7fa443;
         }
         .container {
             max-width: 1100px;
-            margin: 40px auto 40px auto;
-            padding: 20px;
+            margin: 40px auto;
+            padding: 40px;
             background: #fff;
             border-radius: 16px;
-            box-shadow: 0 8px 32px rgba(120,130,101,0.12);
+            box-shadow: 0 8px 32px rgba(120, 130, 101, 0.12);
             text-align: center;
         }
         .section-title {
-            font-size: 2em;
-            margin-bottom: 20px;
-            color: #517C31;
+            font-size: 2.5em;
+            margin-bottom: 32px;
+            color: #4b7f2d;
+            font-weight: bold;
+        }
+        .container p {
+            font-size: 1.15em;
+            line-height: 1.6;
+            color: #555;
+            margin: 16px 0;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 120px;
+            }
+            
+            header {
+                padding: 15px 0;
+            }
+            
+            .logo {
+                font-size: 1.5em;
+                margin-left: 16px;
+                float: none;
+                display: block;
+                text-align: center;
+                margin-bottom: 12px;
+            }
+            
+            nav {
+                float: none;
+                margin: 0;
+                text-align: center;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+                padding: 0 10px;
+            }
+            
+            nav a {
+                margin: 4px 8px;
+                font-size: 0.85em;
+                padding: 4px 0;
+            }
+            
+            .container {
+                margin: 20px 10px;
+                padding: 24px 20px;
+                border-radius: 12px;
+            }
+            
+            .section-title {
+                font-size: 1.8em;
+                margin-bottom: 24px;
+            }
+            
+            .container p {
+                font-size: 1em;
+            }
+        }
+
+        /* Tablet Responsive */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .logo {
+                font-size: 1.7em;
+                margin-left: 20px;
+            }
+            
+            nav {
+                margin-right: 20px;
+            }
+            
+            nav a {
+                margin: 0 12px;
+                font-size: 0.9em;
+            }
+            
+            .container {
+                margin: 30px 20px;
+                padding: 35px;
+            }
+            
+            .section-title {
+                font-size: 2.2em;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <span class="logo">zippity<span style="color:#E5C239;">&#9679;</span></span>
+        <span class="logo">zippity<span style="color:#e5c239;">●</span></span>
         <nav>
             <a href="index.html">PRICING</a>
             <a href="features.html">FEATURES</a>
@@ -64,13 +162,13 @@
             <a href="contact.html">CONTACT US</a>
             <a href="login.html">LOGIN</a>
         </nav>
-        <div style="clear:both;"></div>
+        <div style="clear: both;"></div>
     </header>
 
     <div class="container">
         <div class="section-title">Help</div>
         <p>If you need assistance, please contact our support team via the Contact Us page.</p>
-        <p>Phone: 9322431837 </p>
+        <p>Phone: 9322431837</p>
         <p>Email: gj2615059@gmail.com</p>
     </div>
 </body>
