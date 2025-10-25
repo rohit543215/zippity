@@ -5,6 +5,9 @@
     <title>zippity. – Pricing</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
+      * {
+        box-sizing: border-box;
+      }
       body {
         margin: 0;
         font-family: "Segoe UI", Arial, sans-serif;
@@ -34,6 +37,7 @@
         text-decoration: none;
         margin: 0 20px;
         font-weight: 600;
+        font-size: 0.95em;
       }
       nav a.active,
       nav a:hover {
@@ -55,6 +59,7 @@
         font-weight: bold;
         margin-top: 32px;
         margin-bottom: 12px;
+        line-height: 1.2;
       }
       .subtitle {
         text-align: center;
@@ -201,10 +206,174 @@
         transform: translateY(-2px);
         box-shadow: 0 6px 16px rgba(115, 191, 50, 0.4);
       }
-      @media (max-width: 950px) {
+
+      /* Mobile Responsive Styles */
+      @media (max-width: 768px) {
+        header {
+          padding: 15px 0;
+        }
+        
+        .logo {
+          font-size: 1.5em;
+          margin-left: 16px;
+          float: none;
+          display: block;
+          text-align: center;
+          margin-bottom: 12px;
+        }
+        
+        nav {
+          float: none;
+          margin: 0;
+          text-align: center;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 8px;
+          padding: 0 10px;
+        }
+        
+        nav a {
+          margin: 4px 8px;
+          font-size: 0.85em;
+          padding: 4px 0;
+        }
+        
+        .container {
+          margin: 20px 10px;
+          padding: 20px 15px;
+          border-radius: 12px;
+        }
+        
+        .headline {
+          font-size: 1.6em;
+          margin-top: 20px;
+          margin-bottom: 10px;
+        }
+        
+        .headline br {
+          display: none;
+        }
+        
+        .subtitle {
+          font-size: 1em;
+          padding: 0 10px;
+        }
+        
+        .section-title {
+          font-size: 1.5em;
+          margin-top: 20px;
+        }
+        
         .plans {
           flex-direction: column;
-          align-items: center;
+          align-items: stretch;
+          margin-bottom: 30px;
+        }
+        
+        .plan {
+          margin: 10px 0;
+          min-width: 100%;
+          padding: 24px 20px;
+        }
+        
+        .plan .price {
+          font-size: 1.8em;
+        }
+        
+        .plan ul li {
+          font-size: 0.95em;
+        }
+        
+        .plan .choose-btn {
+          width: 100%;
+          text-align: center;
+          padding: 14px 20px;
+        }
+        
+        .card {
+          padding: 24px 20px;
+          margin: 24px 0;
+          border-radius: 12px;
+        }
+        
+        .card-title {
+          font-size: 1.25em;
+        }
+        
+        .restrictions-list {
+          font-size: 0.95em;
+          padding-left: 20px;
+        }
+        
+        .know-more {
+          width: 100%;
+          text-align: center;
+          margin-top: 20px;
+          display: block;
+        }
+        
+        .projects-section {
+          padding: 30px 20px;
+          margin: 30px 0;
+          border-radius: 12px;
+        }
+        
+        .projects-title {
+          font-size: 1.6em;
+        }
+        
+        .projects-description {
+          font-size: 1em;
+          margin-bottom: 24px;
+        }
+        
+        .projects-description br {
+          display: none;
+        }
+        
+        .project-link {
+          width: 100%;
+          display: block;
+          padding: 16px 24px;
+          font-size: 1.05em;
+        }
+        
+        .get-started {
+          width: 100%;
+          display: block;
+          padding: 16px 20px;
+          font-size: 1.1em;
+          margin-top: 30px;
+        }
+      }
+
+      /* Tablet Responsive */
+      @media (min-width: 769px) and (max-width: 1024px) {
+        .logo {
+          font-size: 1.7em;
+          margin-left: 20px;
+        }
+        
+        nav {
+          margin-right: 20px;
+        }
+        
+        nav a {
+          margin: 0 12px;
+          font-size: 0.9em;
+        }
+        
+        .container {
+          margin: 30px 20px;
+        }
+        
+        .headline {
+          font-size: 2em;
+        }
+        
+        .subtitle {
+          font-size: 1.1em;
         }
       }
     </style>
@@ -284,4 +453,3 @@
     </div>
   </body>
 </html>
-
