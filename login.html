@@ -13,7 +13,7 @@
         font-family: "Segoe UI", Arial, sans-serif;
         background: #f4f9ef;
         color: #222;
-        padding-top: 70px; /* Enough space for fixed header */
+        padding-top: 70px;
       }
       header {
         position: fixed;
@@ -43,6 +43,7 @@
         text-decoration: none;
         margin: 0 20px;
         font-weight: 600;
+        font-size: 0.95em;
       }
       nav a.active,
       nav a:hover {
@@ -56,10 +57,8 @@
         box-shadow: 0 8px 32px rgba(120, 130, 101, 0.12);
         width: 100%;
         max-width: 340px;
-        margin: auto; /* Center horizontally */
+        margin: auto;
       }
-      /* ... rest of your styles remain unchanged ... */
-
       h2 {
         text-align: center;
         color: #4b7f2d;
@@ -123,20 +122,107 @@
       .link a:hover {
         text-decoration: underline;
       }
+
+      /* Mobile Responsive Styles */
+      @media (max-width: 768px) {
+        body {
+          padding-top: 120px;
+        }
+        
+        header {
+          padding: 15px 0;
+        }
+        
+        .logo {
+          font-size: 1.5em;
+          margin-left: 16px;
+          float: none;
+          display: block;
+          text-align: center;
+          margin-bottom: 12px;
+        }
+        
+        nav {
+          float: none;
+          margin: 0;
+          text-align: center;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 8px;
+          padding: 0 10px;
+        }
+        
+        nav a {
+          margin: 4px 8px;
+          font-size: 0.85em;
+          padding: 4px 0;
+        }
+        
+        .container {
+          margin: 20px 10px;
+          padding: 30px 20px;
+          max-width: 100%;
+          border-radius: 12px;
+        }
+        
+        h2 {
+          font-size: 1.5em;
+          margin-bottom: 20px;
+        }
+        
+        label {
+          font-size: 0.95em;
+        }
+        
+        input[type="email"],
+        input[type="password"] {
+          padding: 12px;
+          font-size: 1em;
+        }
+        
+        button {
+          padding: 16px;
+          font-size: 1.05em;
+        }
+        
+        .link {
+          font-size: 0.95em;
+        }
+      }
+
+      /* Tablet Responsive */
+      @media (min-width: 769px) and (max-width: 1024px) {
+        .logo {
+          font-size: 1.7em;
+          margin-left: 20px;
+        }
+        
+        nav {
+          margin-right: 20px;
+        }
+        
+        nav a {
+          margin: 0 12px;
+          font-size: 0.9em;
+        }
+        
+        .container {
+          margin: 30px 20px;
+        }
+      }
     </style>
   </head>
   <body>
     <header>
-      <span class="logo"
-        >zippity<span style="color: #e5c239">&#9679;</span></span
-      >
+      <span class="logo">zippity<span style="color: #e5c239">●</span></span>
       <nav>
-        <a href="index.html" class="active">PRICING</a>
+        <a href="index.html">PRICING</a>
         <a href="features.html">FEATURES</a>
         <a href="enterprise.html">ENTERPRISE</a>
         <a href="help.html">HELP</a>
         <a href="contact.html">CONTACT</a>
-        <a href="login.html">LOGIN</a>
+        <a href="login.html" class="active">LOGIN</a>
       </nav>
       <div style="clear: both"></div>
     </header>
