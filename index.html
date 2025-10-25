@@ -164,6 +164,43 @@
       .get-started:hover {
         background: #5fbf45;
       }
+      .projects-section {
+        background: linear-gradient(135deg, #f4f9ef 0%, #e8f5d9 100%);
+        border-radius: 16px;
+        padding: 40px 32px;
+        margin: 40px 0;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(120, 130, 101, 0.15);
+      }
+      .projects-title {
+        font-size: 2em;
+        font-weight: bold;
+        color: #213217;
+        margin-bottom: 16px;
+      }
+      .projects-description {
+        font-size: 1.1em;
+        color: #517c31;
+        margin-bottom: 28px;
+        line-height: 1.6;
+      }
+      .project-link {
+        display: inline-block;
+        background: #73bf32;
+        color: #fff;
+        text-decoration: none;
+        padding: 14px 36px;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1.15em;
+        transition: all 0.3s;
+        box-shadow: 0 4px 12px rgba(115, 191, 50, 0.3);
+      }
+      .project-link:hover {
+        background: #86d641;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(115, 191, 50, 0.4);
+      }
       @media (max-width: 950px) {
         .plans {
           flex-direction: column;
@@ -228,8 +265,17 @@
         <a class="know-more" href="#">KNOW MORE</a>
       </div>
 
-      
-        
+      <!-- Our Projects Section -->
+      <div class="projects-section">
+        <div class="projects-title">Our Projects</div>
+        <div class="projects-description">
+          Discover more innovative solutions we've built to help businesses thrive.<br />
+          Explore our portfolio and see what else we can do for you!
+        </div>
+        <a href="https://melodic-pithivier-b60cf5.netlify.app/" target="_blank" class="project-link">
+          VIEW OUR PROJECTS →
+        </a>
+      </div>
 
       <!-- Get Started Button -->
       <div style="text-align: center;">
@@ -238,7 +284,3 @@
     </div>
   </body>
 </html>
-
-
-
-
